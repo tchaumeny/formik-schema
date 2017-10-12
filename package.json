@@ -1,0 +1,32 @@
+{
+  "name": "formik-schema",
+  "version": "1.0.0",
+  "description": "Generate Bootstrap forms using JSON schemas and Formik",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tchaumeny/formik-schema.git"
+  },
+  "keywords": [
+    "React",
+    "JSON",
+    "Formik",
+    "Bootstrap",
+    "form",
+    "schema"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tchaumeny/formik-schema/issues"
+  },
+  "homepage": "https://github.com/tchaumeny/formik-schema#readme",
+  "dependencies": {
+    "formik": "^0.9.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}

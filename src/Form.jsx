@@ -1,20 +1,41 @@
 import React from 'react';
+import { Formik } from 'formik'
 
-const widget = (config) => (
-  <input type={config.type} className="form-control" id={config.name} placeholder={config.placeholder} />
-);
 
-const buildFieldRow = (config) => (
+const makeWidget = (config, formikParams) => {
+  var extraProps = {};
+  if (config.placeholder != null) extraProps['placeholder'] = config.placeholder;
+  if (formikParams.handleChange != null) extraProps['onChange'] = formikParams.handleChange;
+  return (<input type={config.type} className="form-control" id={config.name} {...extraProps} />);
+};
+
+const buildFieldRow = (formikParams) => (config) => (
   <div key={config.name} className="form-group row">
     <label for={config.name} className="col-sm-2 col-form-label">{config.title}</label>
     <div className="col-sm-10">
-      {widget(config)}
+      {makeWidget(config, formikParams)}
     </div>
   </div>
 );
 
-export const buildForm = (schema) => (
-  <form>
-    {schema.fields.map(buildFieldRow)}
+const buildForm = (schema) => (formikParams) => (
+  <form onSubmit={formikParams.handleSubmit}>
+    {schema.fields.map(buildFieldRow(formikParams))}
   </form>
 );
+
+export default class Form extends React.Component {
+  render () {
+    return (
+      <Formik
+        initialValues={this.props.initialValues}
+        validate={this.props.validate}
+        onSubmit={this.props.onSubmit}
+        render={buildForm(this.props.schema)}
+      >
+        {this.props.children}
+      </Formik>
+    );
+  }
+}
+

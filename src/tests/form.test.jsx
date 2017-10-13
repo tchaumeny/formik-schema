@@ -32,7 +32,8 @@ testSchema2FormSnapshot('Example from https://getbootstrap.com/docs/4.0/componen
       {
         name: "accept",
         title: "J'accepte.",
-        type: "opt-in",
+        type: "checkbox",
+        description: "Check me out",
       },
     ],
   }

@@ -56,12 +56,21 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
     <div
       className="col-sm-10"
     >
-      <input
-        className="form-control"
-        id="accept"
-        onChange={[Function]}
-        type="opt-in"
-      />
+      <div
+        className="form-check"
+      >
+        <label
+          className="form-check-label"
+        >
+          <input
+            className="form-check-input"
+            onChange={[Function]}
+            type="checkbox"
+          />
+           
+          Check me out
+        </label>
+      </div>
     </div>
   </div>
 </form>

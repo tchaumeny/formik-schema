@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-import makeWidget from './Widgets';
+import { makeWidget } from './Widgets';
 
 
 const buildFieldRow = (formikParams) => (config) => (

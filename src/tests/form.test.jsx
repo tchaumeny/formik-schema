@@ -15,7 +15,6 @@ const testSchema2FormSnapshot = (testTitle, schema) => test(testTitle, () => {
   expect(tree).toMatchSnapshot();
 });
 
-// See https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form
 testSchema2FormSnapshot('Example from https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form',
   {
     fields: [
@@ -34,6 +33,29 @@ testSchema2FormSnapshot('Example from https://getbootstrap.com/docs/4.0/componen
         title: "J'accepte.",
         type: "checkbox",
         description: "Check me out",
+      },
+    ],
+  }
+);
+
+testSchema2FormSnapshot('Form with a choice and a default',
+  {
+    fields: [
+      {
+        name: "dog_or_cat",
+        title: "Votre préférence ?",
+        type: "choices",
+        options: [
+          {
+            value: "cat",
+            title: "Chat",
+          },
+          {
+            value: "dog",
+            title: "Chien",
+            selected: true,
+          },
+        ],
       },
     ],
   }

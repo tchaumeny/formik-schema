@@ -14,7 +14,7 @@ export const makeWidget = (config, formikParams) => {
   return widget(config, formikParams);
 };
 
-// Define default widgets: text, email, textarea, money, date, checkbox, address, choices
+// Define default widgets: textarea, money, date, address
 
 const basicInputWidget = (config, formikParams) => {
   var extraProps = {};
@@ -33,3 +33,14 @@ registerWidget('checkbox', (config, formikParams) => (
     </label>
   </div>
 ));
+registerWidget('choices', (config, formikParams) =>
+  config.options.map((option) => (
+    <div className="form-check" key={option.value}>
+      <label className="form-check-label">
+        <input className="form-check-input" type="radio" name={config.name} id={config.name + '_' + option.value} value={option.value} checked={Boolean(option.selected)} />
+        {option.title}
+      </label>
+    </div>
+  ))
+);
+

@@ -75,3 +75,58 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
   </div>
 </form>
 `;
+
+exports[`Form with a choice and a default 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group row"
+  >
+    <label
+      className="col-sm-2 col-form-label"
+      for="dog_or_cat"
+    >
+      Votre préférence ?
+    </label>
+    <div
+      className="col-sm-10"
+    >
+      <div
+        className="form-check"
+      >
+        <label
+          className="form-check-label"
+        >
+          <input
+            checked={false}
+            className="form-check-input"
+            id="dog_or_cat_cat"
+            name="dog_or_cat"
+            type="radio"
+            value="cat"
+          />
+          Chat
+        </label>
+      </div>
+      <div
+        className="form-check"
+      >
+        <label
+          className="form-check-label"
+        >
+          <input
+            checked={true}
+            className="form-check-input"
+            id="dog_or_cat_dog"
+            name="dog_or_cat"
+            type="radio"
+            value="dog"
+          />
+          Chien
+        </label>
+      </div>
+    </div>
+  </div>
+</form>
+`;

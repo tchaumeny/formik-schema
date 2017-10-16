@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom';
-import {Form, registerWidget} from '../src/index.js';
+import moment from 'moment';
+
+import {Form} from '../src/index.js';
 
 
 const schema = {
@@ -38,6 +40,14 @@ const schema = {
       ]
     },
     {
+      name: "date",
+      title: "Chose a date",
+      type: "date",
+      datePickerProps: {
+        inline: true,
+      },
+    },
+    {
       name: "comment",
       title: "Your comment",
       type: "textarea",
@@ -52,15 +62,16 @@ const schema = {
 };
 
 ReactDOM.render(
-    <Form
-      initialValues={{
-        email: "",
-        password: "",
-        OS: 'linux',
-        accept: true,
-      }}
-      schema={schema}
-      onSubmit={(values) => {console.log(values)}}
-    />,
+  <Form
+    initialValues={{
+      date: moment("2016-12-24"),
+      email: "",
+      password: "",
+      OS: 'linux',
+      accept: true,
+    }}
+    schema={schema}
+    onSubmit={(values) => {console.log(values)}}
+  />,
   document.getElementById('root')
 );

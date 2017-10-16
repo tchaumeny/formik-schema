@@ -9,7 +9,7 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
   >
     <label
       className="col-sm-2 col-form-label"
-      for="email"
+      htmlFor="email"
     >
       Email
     </label>
@@ -19,8 +19,10 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
       <input
         className="form-control"
         id="email"
+        name="email"
         onChange={[Function]}
         type="email"
+        value={undefined}
       />
     </div>
   </div>
@@ -29,7 +31,7 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
   >
     <label
       className="col-sm-2 col-form-label"
-      for="password"
+      htmlFor="password"
     >
       Mot de passe
     </label>
@@ -39,8 +41,10 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
       <input
         className="form-control"
         id="password"
+        name="password"
         onChange={[Function]}
         type="password"
+        value={undefined}
       />
     </div>
   </div>
@@ -49,7 +53,7 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
   >
     <label
       className="col-sm-2 col-form-label"
-      for="accept"
+      htmlFor="accept"
     >
       J'accepte.
     </label>
@@ -63,7 +67,9 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
           className="form-check-label"
         >
           <input
+            checked={undefined}
             className="form-check-input"
+            name="accept"
             onChange={[Function]}
             type="checkbox"
           />
@@ -85,7 +91,7 @@ exports[`Form with a choice and a default 1`] = `
   >
     <label
       className="col-sm-2 col-form-label"
-      for="dog_or_cat"
+      htmlFor="dog_or_cat"
     >
       Votre préférence ?
     </label>
@@ -116,7 +122,7 @@ exports[`Form with a choice and a default 1`] = `
           className="form-check-label"
         >
           <input
-            checked={true}
+            checked={false}
             className="form-check-input"
             id="dog_or_cat_dog"
             name="dog_or_cat"

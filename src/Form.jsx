@@ -6,7 +6,7 @@ import { makeWidget } from './Widgets';
 
 const buildFieldRow = (formikParams) => (config) => (
   <div key={config.name} className="form-group row">
-    <label for={config.name} className="col-sm-2 col-form-label">{config.title}</label>
+    <label htmlFor={config.name} className="col-sm-2 col-form-label">{config.title}</label>
     <div className="col-sm-10">
       {makeWidget(config, formikParams)}
     </div>

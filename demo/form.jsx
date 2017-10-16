@@ -1,7 +1,10 @@
 import ReactDOM from 'react-dom';
 import moment from 'moment';
 
-import {Form} from '../src/index.js';
+import { Form } from '../src/index.js';
+import '../src/widgets/builtin.jsx';
+import '../src/widgets/address.jsx';
+import '../src/widgets/dates.jsx';
 
 
 const schema = {
@@ -46,11 +49,18 @@ const schema = {
       datePickerProps: {
         inline: true,
       },
+      helpText: "Here is an example with the inline option",
+    },
+    {
+      name: "address",
+      title: "Your address",
+      type: "address",
     },
     {
       name: "comment",
-      title: "Your comment",
+      title: "A comment ?",
       type: "textarea",
+      helpText: "Any comment you may have."
     },
     {
       name: "accept",
@@ -67,6 +77,7 @@ ReactDOM.render(
       date: moment("2016-12-24"),
       email: "",
       password: "",
+      address: "",
       OS: 'linux',
       accept: true,
     }}

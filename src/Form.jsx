@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Formik } from 'formik';
 
-import { makeWidget } from './Widgets.jsx';
+import { makeWidget } from './widgets/registry.jsx';
 
 
 const buildFieldRow = (formikParams) => (config) => (
@@ -10,6 +10,7 @@ const buildFieldRow = (formikParams) => (config) => (
     <label htmlFor={config.name} className="col-3 col-form-label">{config.title}</label>
     <div className="col">
       {makeWidget(config, formikParams)}
+      { config.helpText && (<small className="form-text text-muted">{config.helpText}</small>) }
     </div>
   </div>
 );

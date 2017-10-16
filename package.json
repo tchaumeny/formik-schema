@@ -27,6 +27,7 @@
   "homepage": "https://github.com/tchaumeny/formik-schema#readme",
   "dependencies": {
     "formik": "^0.9.4",
+    "places.js": "^1.4.15",
     "react": "^16.0.0",
     "react-datepicker": "^0.55.0",
     "react-dom": "^16.0.0"

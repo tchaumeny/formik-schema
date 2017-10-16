@@ -1,26 +1,9 @@
-import React from 'react';
-import DatePicker from 'react-datepicker';
+import { registerWidget } from './registry.jsx';
 
-import 'react-datepicker/dist/react-datepicker.css';
-
-
-// Widget registry things
-const widgetRegistry = {
-  mapping: {},
-  get: function(name) {return this.mapping[name]},
-  register: function(name, widget) { this.mapping[name] = widget },
-}
-export const registerWidget = widgetRegistry.register.bind(widgetRegistry);
-
-export const makeWidget = (config, formikParams) => {
-  const widget = widgetRegistry.get(config.type);
-  if (widget == null) throw new Error('Unkown widget type: ' + config.type);
-  return widget(config, formikParams);
-};
 
 // Define default widgets: textarea, money, date, address
 
-const basicInputWidget = (config, formikParams) => {
+export const basicInputWidget = (config, formikParams) => {
   var extraProps = {};
   if (config.placeholder != null) extraProps['placeholder'] = config.placeholder;
   if (formikParams.handleChange != null) extraProps['onChange'] = formikParams.handleChange;
@@ -54,20 +37,3 @@ registerWidget('choices', (config, formikParams) =>
     </div>
   ))
 );
-
-// Date and times...
-const makeDatePickerWidget = (baseProps) => (config, formikParams) => {
-  const datePickerProps = Object.assign({className: "form-control"}, baseProps, config.datePickerProps);
-  return (
-    <DatePicker
-      id={config.name}
-      name={config.name}
-      selected={formikParams.values[config.name]}
-      onChange={formikParams.setFieldValue.bind(null, config.name)}
-      {...datePickerProps}
-    />  
-  );
-}
-
-registerWidget('date', makeDatePickerWidget({}));
-registerWidget('datetime', makeDatePickerWidget({showTimeSelect: true}));

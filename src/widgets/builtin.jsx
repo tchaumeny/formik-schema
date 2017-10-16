@@ -1,4 +1,4 @@
-import { registerWidget } from './registry.jsx';
+import { registerWidget } from '../registry.jsx';
 
 
 // Define default widgets: textarea, money, date, address

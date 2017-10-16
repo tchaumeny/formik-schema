@@ -1,2 +1,2 @@
 export { Form } from './Form.jsx';
-export { registerWidget } from './widgets/registry.jsx';
+export { registerWidget } from './registry.jsx';

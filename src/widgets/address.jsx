@@ -1,6 +1,6 @@
 import places from 'places.js';
 
-import { registerWidget } from './registry.jsx';
+import { registerWidget } from '../registry.jsx';
 
 const defaultInputId = "address-input";
 

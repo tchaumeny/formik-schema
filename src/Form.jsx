@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Formik } from 'formik';
-
-import { makeWidget } from './widgets/registry.jsx';
+import { makeWidget } from './registry.jsx';
 
 
 const buildFieldRow = (formikParams) => (config) => (

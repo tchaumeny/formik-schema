@@ -31,7 +31,7 @@ registerWidget('url', basicInputWidget);
 registerWidget('number', basicInputWidget);
 
 registerWidget('textarea', (config, formikParams) => (
-  <textarea name={config.name} className="form-control" id={config.name} value={formikParams.values[config.name]} rows={config.rows || 3} />
+  <textarea name={config.name} className="form-control" onChange={formikParams.handleChange} id={config.name} value={formikParams.values[config.name]} rows={config.rows || 3} />
 ));
 
 registerWidget('checkbox', (config, formikParams) => (
@@ -45,8 +45,7 @@ registerWidget('choices', (config, formikParams) =>
   config.options.map((option) => (
     <div className="form-check" key={option.value}>
       <label className="form-check-label">
-        <input name={config.name} className="form-check-input" type="radio" id={config.name + '_' + option.value} value={option.value} checked={formikParams.values[config.name] === option.value} />
-        {option.title}
+        <input name={config.name} className="form-check-input" onChange={formikParams.handleChange} type="radio" id={config.name + '_' + option.value} value={option.value} checked={formikParams.values[config.name] === option.value} /> {option.title}
       </label>
     </div>
   ))

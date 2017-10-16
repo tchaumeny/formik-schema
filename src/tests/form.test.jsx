@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../Form.jsx';
+import Form from '../index.js';
 import renderer from 'react-test-renderer';
 
 

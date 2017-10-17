@@ -1,11 +1,12 @@
 {
   "name": "formik-schema",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "Generate Bootstrap forms using JSON schemas and Formik",
   "main": "lib/formik-schema.js",
   "scripts": {
-    "test": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "pretest": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

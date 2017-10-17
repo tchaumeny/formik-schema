@@ -51,7 +51,11 @@ WIP
 
 ## Testing
 
-WIP
+This library comes with a few basic tests, using [Jest](http://facebook.github.io/jest/):
+
+    npm test
+
+This will actually build the bundle and run a few snapshot tests against it.
 
 ## Custom widgets
 

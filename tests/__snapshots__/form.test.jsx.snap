@@ -8,13 +8,13 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
     className="form-group row"
   >
     <label
-      className="col-sm-2 col-form-label"
+      className="col-3 col-form-label"
       htmlFor="email"
     >
       Email
     </label>
     <div
-      className="col-sm-10"
+      className="col"
     >
       <input
         className="form-control"
@@ -30,13 +30,13 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
     className="form-group row"
   >
     <label
-      className="col-sm-2 col-form-label"
+      className="col-3 col-form-label"
       htmlFor="password"
     >
       Mot de passe
     </label>
     <div
-      className="col-sm-10"
+      className="col"
     >
       <input
         className="form-control"
@@ -52,13 +52,13 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
     className="form-group row"
   >
     <label
-      className="col-sm-2 col-form-label"
+      className="col-3 col-form-label"
       htmlFor="accept"
     >
-      J'accepte.
+      I accept.
     </label>
     <div
-      className="col-sm-10"
+      className="col"
     >
       <div
         className="form-check"
@@ -74,11 +74,17 @@ exports[`Example from https://getbootstrap.com/docs/4.0/components/forms/#horizo
             type="checkbox"
           />
            
-          Check me out
+          Common, accept it!
         </label>
       </div>
     </div>
   </div>
+  <button
+    className="btn btn-primary"
+    type="submit"
+  >
+    OK
+  </button>
 </form>
 `;
 
@@ -90,13 +96,13 @@ exports[`Form with a choice and a default 1`] = `
     className="form-group row"
   >
     <label
-      className="col-sm-2 col-form-label"
+      className="col-3 col-form-label"
       htmlFor="dog_or_cat"
     >
-      Votre préférence ?
+      Are you rather a dog or cat person ?
     </label>
     <div
-      className="col-sm-10"
+      className="col"
     >
       <div
         className="form-check"
@@ -109,9 +115,11 @@ exports[`Form with a choice and a default 1`] = `
             className="form-check-input"
             id="dog_or_cat_cat"
             name="dog_or_cat"
+            onChange={[Function]}
             type="radio"
             value="cat"
           />
+           
           Chat
         </label>
       </div>
@@ -126,13 +134,21 @@ exports[`Form with a choice and a default 1`] = `
             className="form-check-input"
             id="dog_or_cat_dog"
             name="dog_or_cat"
+            onChange={[Function]}
             type="radio"
             value="dog"
           />
+           
           Chien
         </label>
       </div>
     </div>
   </div>
+  <button
+    className="btn btn-primary"
+    type="submit"
+  >
+    OK
+  </button>
 </form>
 `;

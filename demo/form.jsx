@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import moment from 'moment';
 
-import { Form } from '../lib/formik-schema';
+import { Form } from '../src/index';
 
 
 const schema = {

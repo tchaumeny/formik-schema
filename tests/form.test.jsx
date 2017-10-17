@@ -1,4 +1,4 @@
-import { Form } from '../index';
+import { Form } from '../lib/formik-schema';
 import renderer from 'react-test-renderer';
 import React from 'react';
 
@@ -29,9 +29,9 @@ testSchema2FormSnapshot('Example from https://getbootstrap.com/docs/4.0/componen
       },
       {
         name: "accept",
-        title: "J'accepte.",
+        title: "I accept.",
         type: "checkbox",
-        description: "Check me out",
+        description: "Common, accept it!",
       },
     ],
   }
@@ -42,7 +42,7 @@ testSchema2FormSnapshot('Form with a choice and a default',
     fields: [
       {
         name: "dog_or_cat",
-        title: "Votre préférence ?",
+        title: "Are you rather a dog or cat person ?",
         type: "choices",
         options: [
           {

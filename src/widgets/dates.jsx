@@ -1,4 +1,4 @@
-import { registerWidget } from '../registry.jsx';
+import { registerWidget } from '../registry';
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';

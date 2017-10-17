@@ -3,12 +3,15 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    bundle: './src/index.js',
-    demo: './demo/form.jsx'
+    bundle: './src/index',
+    demo: './demo/form'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   module: {
     rules: [

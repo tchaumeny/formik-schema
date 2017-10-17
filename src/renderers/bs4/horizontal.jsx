@@ -1,4 +1,4 @@
-import { makeWidget, registerRenderer } from '../../registry.jsx';
+import { makeWidget, registerRenderer } from '../../registry';
 
 
 const renderFieldRow = (formikParams) => (config) => (

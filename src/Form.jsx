@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-import { fetchRenderer } from './registry.jsx';
+import { fetchRenderer } from './registry';
 
 export class Form extends React.Component {
   constructor(props) {

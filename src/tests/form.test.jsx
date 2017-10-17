@@ -1,6 +1,6 @@
-import React from 'react';
-import Form from '../index';
+import { Form } from '../index';
 import renderer from 'react-test-renderer';
+import React from 'react';
 
 
 const testSchema2FormSnapshot = (testTitle, schema) => test(testTitle, () => {
@@ -8,8 +8,7 @@ const testSchema2FormSnapshot = (testTitle, schema) => test(testTitle, () => {
     <Form
       schema={schema}
       onSubmit={() => {}}
-    >
-    </Form>
+    />
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();

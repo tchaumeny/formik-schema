@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import moment from 'moment';
 
 import { Form } from '../src/index.js';
+import '../src/renderers/bs4/horizontal.jsx';
 import '../src/widgets/builtin.jsx';
 import '../src/widgets/address.jsx';
 import '../src/widgets/dates.jsx';

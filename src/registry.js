@@ -22,4 +22,3 @@ export const registerWidget = widgetRegistry.register.bind(widgetRegistry);
 const rendererRegistry = new Registry('bs4-horizontal');
 export const registerRenderer = rendererRegistry.register.bind(rendererRegistry);
 export const fetchRenderer = rendererRegistry.get.bind(rendererRegistry);
-

@@ -4,10 +4,7 @@ import moment from 'moment';
 import { Form } from '../src/index';
 
 
-const schema = {
-  form: {
-    renderer: 'bs4-horizontal',
-  },
+const schema1 = {
   fields: [
     {
       name: "email",
@@ -51,6 +48,18 @@ const schema = {
       },
       helpText: "Here is an example with the inline option",
     },
+  ],
+};
+
+const schema2 = {
+  form: {
+    renderer: 'bs4-modal-horizontal',
+    rendererOptions: {
+      modalId: 'formModal',
+      modalTitle: 'Exemple dans une fenêtre modale',
+    }
+  },
+  fields: [
     {
       name: "address",
       title: "Your address",
@@ -72,17 +81,31 @@ const schema = {
 };
 
 ReactDOM.render(
-  <Form
-    initialValues={{
-      date: moment("2016-12-24"),
-      email: "",
-      password: "",
-      address: "",
-      OS: 'linux',
-      accept: true,
-    }}
-    schema={schema}
-    onSubmit={(values) => {console.log(values)}}
-  />,
+  <div>
+    <h2>Sample form</h2>
+    <Form
+      initialValues={{
+        email: "",
+        password: "",
+        OS: 'linux',
+        date: moment("2016-12-24"),
+      }}
+      schema={schema1}
+      onSubmit={(values) => {console.log(values)}}
+    />
+    <hr />
+    <h2>Form in a modal</h2>
+    <Form
+      initialValues={{
+        address: "",
+        accept: true,
+      }}
+      schema={schema2}
+      onSubmit={(values) => {console.log(values)}}
+    />
+    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#formModal">
+      Launch demo modal
+    </button>
+  </div>,
   document.getElementById('root')
 );

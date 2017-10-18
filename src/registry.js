@@ -1,10 +1,9 @@
 class Registry {
-  constructor(fallback) {
-    this.fallback = fallback;
+  constructor() {
     this.mapping = {};
   }
   get(name) {
-    const o = this.mapping[name || this.fallback];
+    const o = this.mapping[name];
     if (o == null) throw new Error('No object registered for: ' + name);
     return o;
   }
@@ -14,11 +13,16 @@ class Registry {
 }
 
 // Widgets
-const widgetRegistry = new Registry(null);
+const widgetRegistry = new Registry();
 export const makeWidget = (config, formikParams) => widgetRegistry.get(config.type)(config, formikParams);
 export const registerWidget = widgetRegistry.register.bind(widgetRegistry);
 
 // Renderers
-const rendererRegistry = new Registry('bs4-horizontal');
+
+const rendererRegistry = new Registry();
+export const buildRenderFunction = (schema) => (formikParams) => {
+  const defaultRenderer = 'bs4-horizontal';
+  const renderer = (schema.form && schema.form.renderer) || defaultRenderer;
+  return rendererRegistry.get(renderer)(schema)(formikParams);
+};
 export const registerRenderer = rendererRegistry.register.bind(rendererRegistry);
-export const fetchRenderer = rendererRegistry.get.bind(rendererRegistry);

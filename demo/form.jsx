@@ -5,6 +5,9 @@ import { Form } from '../src/index';
 
 
 const schema = {
+  form: {
+    renderer: 'bs4-horizontal',
+  },
   fields: [
     {
       name: "email",

@@ -21,28 +21,3 @@ registerRenderer('bs4-horizontal',
       <button type="submit" className="btn btn-primary">OK</button>
     </form>)
 );
-
-registerRenderer('bs4-modal-horizontal',
-  (schema) => (formikParams) => (
-    <div className="modal" id={getRendererOption(schema, 'modalId', 'modalForm')}>
-      <form onSubmit={formikParams.handleSubmit}>
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title">{getRendererOption(schema, 'modalTitle')}</h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">
-              {schema.fields.map(renderFieldAsRow(formikParams))}
-            </div>
-            <div className="modal-footer">
-              <button type="submit" className="btn btn-primary">OK</button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  )
-);

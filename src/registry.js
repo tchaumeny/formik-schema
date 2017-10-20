@@ -8,7 +8,7 @@ class Registry {
     return o;
   }
   register(name, o){
-    this.mapping[name] = o
+    this.mapping[name] = o;
   }
 }
 

@@ -53,10 +53,8 @@ const schema1 = {
 
 const schema2 = {
   form: {
-    renderer: 'bs4-modal-horizontal',
+    renderer: 'bs4-horizontal',
     rendererOptions: {
-      modalId: 'formModal',
-      modalTitle: 'Exemple dans une fenêtre modale',
     }
   },
   fields: [
@@ -94,18 +92,15 @@ ReactDOM.render(
       onSubmit={(values) => {console.log(values)}}
     />
     <hr />
-    <h2>Form in a modal</h2>
+    <h2>Second example</h2>
     <Form
       initialValues={{
         address: "",
         accept: true,
       }}
       schema={schema2}
-      onSubmit={(values) => {console.log(values)}}
+      onSubmit={(values) => {console.log(values);}}
     />
-    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#formModal">
-      Launch demo modal
-    </button>
   </div>,
   document.getElementById('root')
 );

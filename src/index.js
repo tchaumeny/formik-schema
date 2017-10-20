@@ -1,5 +1,6 @@
 export { Form } from './Form';
-export { registerWidget, registerRenderer } from './registry';
+export * from './registry';
+export * from './renderers/bs4/horizontal';
 
 // Load default renderers and widgets
 import './renderers/bs4/horizontal';

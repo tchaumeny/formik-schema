@@ -1,10 +1,10 @@
 import { makeWidget, registerRenderer } from '../../registry';
 
-const getRendererOption = (schema, name, defaultValue) => (
+export const getRendererOption = (schema, name, defaultValue) => (
   schema && schema.form && schema.form.rendererOptions && schema.form.rendererOptions[name] || defaultValue
 );
 
-const renderFieldAsRow = (formikParams) => (config) => (
+export const renderFieldAsRow = (formikParams) => (config) => (
   <div key={config.name} className="form-group row">
     <label htmlFor={config.name} className="col-3 col-form-label">{config.title}</label>
     <div className="col">

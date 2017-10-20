@@ -1,6 +1,6 @@
 {
   "name": "formik-schema",
-  "version": "1.0.3-alpha",
+  "version": "1.0.4-alpha",
   "description": "Generate Bootstrap forms using JSON schemas and Formik",
   "main": "lib/formik-schema.js",
   "scripts": {

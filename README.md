@@ -2,38 +2,22 @@
 
 # formik-schema
 
-Create forms simply using [React](https://reactjs.org/) and [Bootstrap 4](https://getbootstrap.com/).
+Create forms simply using [React](https://reactjs.org/).
 
-[See a live **demo**](https://codesandbox.io/embed/716j2l79xq)
 ```js
 import { Form } from 'formik-schema';
 
 const schema = {
   fields: [
-    {
-      name: "email",
-      title: "Email",
-      type: "email"
-    },
-    {
-      name: "date",
-      title: "Chose a date",
-      type: "date",
-    },
-    {
-      name: "accept",
-      title: "Conditions",
-      type: "checkbox",
-      description: "I accept everything."
-    }
+    { name: "email", title: "Email", type: "email" },
+    { name: "date", title: "Chose a date", type: "date" },
+    { name: "accept", title: "Conditions", type: "checkbox", description: "I accept everything." }
   ]
 };
 
 ReactDOM.render(
   <Form
     initialValues={{
-      email: "",
-      date: moment("2016-12-24"),
       accept: true,
     }}
     schema={schema}
@@ -42,6 +26,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+#### ➡ [Live demo](https://codesandbox.io/s/github/tchaumeny/formik-schema/tree/master/demo)
+
+Built-in support for [Bootstrap 4](https://getbootstrap.com/), highly customizable renderers.
 
 ## Installation
 

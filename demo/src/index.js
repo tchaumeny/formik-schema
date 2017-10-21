@@ -79,6 +79,11 @@ const schema2 = {
   ],
 };
 
+submitHandler = (values) => {
+  console.log(values);
+  window.alert("Form submitted! (check console)");
+}
+
 ReactDOM.render(
   <div>
     <h2>Sample form</h2>
@@ -90,7 +95,7 @@ ReactDOM.render(
         date: moment("2016-12-24"),
       }}
       schema={schema1}
-      onSubmit={(values) => {console.log(values)}}
+      onSubmit={submitHandler}
     />
     <hr />
     <h2>Second example</h2>
@@ -100,7 +105,7 @@ ReactDOM.render(
         accept: true,
       }}
       schema={schema2}
-      onSubmit={(values) => {console.log(values);}}
+      onSubmit={submitHandler}
     />
   </div>,
   document.getElementById('root')

@@ -79,7 +79,7 @@ const schema2 = {
   ],
 };
 
-submitHandler = (values) => {
+const submitHandler = (values) => {
   console.log(values);
   window.alert("Form submitted! (check console)");
 }

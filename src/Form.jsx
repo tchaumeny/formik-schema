@@ -1,9 +1,10 @@
+import React from 'react';
 import { Formik } from 'formik';
 
 import { buildRenderFunction } from './registry';
 
 export class Form extends React.Component {
-  render () {
+  render() {
     return (
       <Formik
         {...this.props}

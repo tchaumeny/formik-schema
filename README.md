@@ -1,4 +1,4 @@
-#### ⚠ Work in progress, use at your own risk (alpha version) ⚠
+#### ⚠ This project has been abandoned, use at your own risk ⚠
 
 # formik-schema
 
